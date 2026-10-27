@@ -203,7 +203,7 @@ a:hover { color: #F6E2A8; }
 @keyframes spin { to { --ang: 360deg; } }
 .panel { border-radius: 30px; box-shadow: 0 50px 120px -60px color-mix(in oklab, var(--gold) 60%, transparent); }
 .pn { display: flex; flex-direction: column; gap: 40px; padding: 48px; animation: pnin .7s cubic-bezier(.2,.7,.2,1) both; }
-@keyframes pnin { from { opacity: 0; transform: translateY(18px); filter: blur(6px); } }
+@keyframes pnin { from { opacity: 0; transform: translateY(14px); } }
 .pn-top { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; align-items: start; }
 .pn-intro { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
 .pn-tag { font-size: 12px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); border: 1px solid var(--line); padding: 7px 13px; border-radius: 999px; }
@@ -352,13 +352,25 @@ a:hover { color: #F6E2A8; }
 /* cta */
 .cta { position: relative; border-radius: 36px; overflow: hidden; border: 1px solid var(--line); background: #0A0806; isolation: isolate; }
 .cta-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
-.cta-bg .grid-lines { -webkit-mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, #000 10%, transparent 75%); mask-image: radial-gradient(ellipse 60% 70% at 50% 40%, #000 10%, transparent 75%); }
-.rays { position: absolute; left: 50%; top: 40%; width: 1400px; height: 1400px; margin: -700px 0 0 -700px; background: repeating-conic-gradient(from var(--ang), color-mix(in oklab, var(--gold) 9%, transparent) 0deg 5deg, transparent 5deg 18deg); -webkit-mask-image: radial-gradient(circle, #000 0%, transparent 50%); mask-image: radial-gradient(circle, #000 0%, transparent 50%); animation: spin 60s linear infinite; }
-.cta-orb { position: absolute; left: 50%; top: -300px; width: 900px; height: 600px; margin-left: -450px; border-radius: 50%; background: radial-gradient(ellipse, color-mix(in oklab, var(--gold) 34%, transparent), transparent 65%); filter: blur(40px); animation: breathe 8s ease-in-out infinite; }
-.cta-c { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 22px; padding: 96px 32px; }
-.cta-logo { width: 180px; height: auto; display: block; margin-bottom: 8px; animation: logoglow 4s ease-in-out infinite; }
-@keyframes logoglow { 0%, 100% { filter: drop-shadow(0 0 16px color-mix(in oklab, var(--gold) 30%, transparent)); } 50% { filter: drop-shadow(0 0 40px color-mix(in oklab, var(--gold) 60%, transparent)); } }
-.cta .h2 { max-width: 18ch; font-size: clamp(32px, 3.8vw, 52px); }
+.cta-bg .grid-lines { background-position: 0 0; -webkit-mask-image: radial-gradient(ellipse 75% 85% at 50% 45%, #000 20%, transparent 80%); mask-image: radial-gradient(ellipse 75% 85% at 50% 45%, #000 20%, transparent 80%); }
+.cta-mask { position: absolute; inset: 0; -webkit-mask-image: radial-gradient(ellipse 75% 85% at 50% 45%, #000 20%, transparent 80%); mask-image: radial-gradient(ellipse 75% 85% at 50% 45%, #000 20%, transparent 80%); }
+.hb, .vb { position: absolute; opacity: 0; }
+.hb { left: 0; height: 1px; width: 220px; background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--gold-hi) 70%, transparent), transparent); animation: hbeam 9s linear infinite; }
+.vb { top: 0; width: 1px; height: 200px; background: linear-gradient(180deg, transparent, color-mix(in oklab, var(--gold-hi) 70%, transparent), transparent); animation: vbeam 8s linear infinite; }
+.hb1 { top: 72px; }
+.hb2 { top: 216px; animation-delay: -3s; animation-duration: 11s; }
+.hb3 { top: 360px; animation-delay: -6.5s; animation-duration: 10s; }
+.vb1 { left: 216px; animation-delay: -1s; }
+.vb2 { left: 504px; animation-delay: -4.5s; animation-duration: 10s; }
+.vb3 { left: 792px; animation-delay: -2.5s; animation-duration: 9s; }
+.vb4 { left: 1008px; animation-delay: -6s; }
+@keyframes hbeam { 0% { transform: translateX(-240px); opacity: 0; } 10% { opacity: .5; } 90% { opacity: .5; } 100% { transform: translateX(1400px); opacity: 0; } }
+@keyframes vbeam { 0% { transform: translateY(-220px); opacity: 0; } 10% { opacity: .45; } 90% { opacity: .45; } 100% { transform: translateY(640px); opacity: 0; } }
+.cta-orb { position: absolute; left: 50%; top: -320px; width: 900px; height: 560px; margin-left: -450px; border-radius: 50%; background: radial-gradient(ellipse, color-mix(in oklab, var(--gold) 26%, transparent), transparent 65%); filter: blur(40px); animation: breathe 10s ease-in-out infinite; }
+.cta-c { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; padding: 72px 32px; }
+.cta-logo { width: 112px; height: auto; display: block; animation: logoglow 4s ease-in-out infinite; }
+@keyframes logoglow { 0%, 100% { filter: drop-shadow(0 0 12px color-mix(in oklab, var(--gold) 28%, transparent)); } 50% { filter: drop-shadow(0 0 30px color-mix(in oklab, var(--gold) 55%, transparent)); } }
+.cta .h2 { max-width: none; font-size: clamp(28px, 3.4vw, 46px); }
 
 /* rodapé */
 .foot { position: relative; border-top: 1px solid var(--line2); padding: 72px 0 32px; overflow: hidden; }
@@ -378,9 +390,9 @@ a:hover { color: #F6E2A8; }
 
 /* animações de scroll */
 @supports (animation-timeline: view()) {
-  .rv { animation: rv linear both; animation-timeline: view(); animation-range: entry 0% cover 26%; }
-  .rv2 { animation: rv linear both; animation-timeline: view(); animation-range: entry 8% cover 34%; }
-  .rv3 { animation: rv linear both; animation-timeline: view(); animation-range: entry 16% cover 42%; }
+  .rv { animation: rv linear both; animation-timeline: view(); animation-range: entry 0px entry 220px; }
+  .rv2 { animation: rv linear both; animation-timeline: view(); animation-range: entry 30px entry 260px; }
+  .rv3 { animation: rv linear both; animation-timeline: view(); animation-range: entry 60px entry 300px; }
   .tilt { animation: tilt linear both; animation-timeline: scroll(root); animation-range: 0 520px; }
   .steps-line { animation: grow linear both; animation-timeline: view(); animation-range: entry 20% cover 45%; }
   .cnt::after { animation: count linear both; animation-timeline: view(); animation-range: entry 10% cover 40%; }
@@ -388,7 +400,7 @@ a:hover { color: #F6E2A8; }
   .silh { animation: para linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
   .foot-mark { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% cover 60%; }
 }
-@keyframes rv { from { opacity: 0; transform: translateY(56px) scale(.97); filter: blur(8px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes rv { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
 @keyframes tilt { from { transform: rotateX(16deg) scale(.94); } to { transform: none; } }
 @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes count { from { --n: 0; } to { --n: 10; } }
@@ -426,7 +438,20 @@ a:hover { color: #F6E2A8; }
   .foot-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
-  .tabs { grid-template-columns: minmax(0, 1fr); }
+  .tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; padding: 6px; margin-bottom: 20px; }
+  .tab { grid-template-columns: minmax(0, 1fr); padding: 12px; row-gap: 8px; min-height: 0; }
+  .tab-t { font-size: 16px; }
+  .tab-s { display: none; }
+  .tab-mk { grid-column: 1; grid-row: auto; justify-self: start; font-size: 11px; padding: 4px 8px; }
+  .h3 { font-size: 28px; }
+  .pn-side { padding: 18px; }
+  .it { padding: 18px; gap: 12px; }
+  .pn-foot { padding-top: 24px; gap: 20px; }
+  .pn-foot .btn { width: 100%; }
+  .cta .ctas { flex-direction: column; width: 100%; }
+  .cta .btn { width: 100%; }
+  .cta .micro { gap: 10px 18px; }
+  .cta-logo { width: 92px; }
   .pn-r { grid-template-columns: minmax(0, 1fr); }
   .it.wide { flex-direction: column; align-items: flex-start; }
   .stats { grid-template-columns: minmax(0, 1fr); }
@@ -569,11 +594,11 @@ a:hover { color: #F6E2A8; }
 <h2 class="d h2">Escolha o caminho certo para o seu momento.</h2>
 <p class="sub">Dois planos, um para cada fase: começar com 3 marketplaces ou ter a gestão completa nos 6. Clique e veja o que está incluído.</p>
 </div>
-<div class="tabs rv2" role="tablist" aria-label="Planos">
+<div class="tabs" role="tablist" aria-label="Planos">
 <button class="tab on" type="button" role="tab" id="tab-escala" aria-controls="pane-escala" aria-selected="true" data-tab="escala"><span class="tab-t">Plano Escala</span><span class="tab-s">Quero começar ou expandir</span><span class="tab-mk">3 marketplaces</span></button>
 <button class="tab" type="button" role="tab" id="tab-gestao" aria-controls="pane-gestao" aria-selected="false" tabindex="-1" data-tab="gestao"><span class="tab-t">Gestão Completa</span><span class="tab-s">Já vendo e quero profissionalizar</span><span class="tab-mk">6 marketplaces</span></button>
 </div>
-<div class="panel glow rv3">
+<div class="panel glow">
 
 <div class="tabpane" id="pane-escala" role="tabpanel" aria-labelledby="tab-escala" data-pane="escala">
 <div class="pn">
@@ -781,10 +806,10 @@ a:hover { color: #F6E2A8; }
 <section class="sec tight">
 <div class="wrap">
 <div class="cta rv">
-<div class="cta-bg" aria-hidden="true"><div class="grid-lines"></div><div class="rays"></div><div class="cta-orb"></div></div>
+<div class="cta-bg" aria-hidden="true"><div class="grid-lines"></div><div class="cta-mask"><span class="hb hb1"></span><span class="hb hb2"></span><span class="hb hb3"></span><span class="vb vb1"></span><span class="vb vb2"></span><span class="vb vb3"></span><span class="vb vb4"></span></div><div class="cta-orb"></div></div>
 <div class="cta-c">
 <img class="cta-logo" src="assets/logo-gold.png" alt="Gestor Weslen">
-<h2 class="d h2">Vamos tirar seu crescimento do <span class="shine">improviso</span>?</h2>
+<h2 class="d h2">Vamos tirar seu crescimento<br> do <span class="shine">improviso</span>?</h2>
 <p class="sub">Se você quer parar de apostar e começar a crescer com previsibilidade nos marketplaces, o próximo passo é simples.</p>
 <div class="ctas">
 <a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20quero%20minha%20an%C3%A1lise%20gratuita.">Quero minha análise gratuita <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
