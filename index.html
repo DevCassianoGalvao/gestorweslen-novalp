@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Gestor Weslen — Plano Escala e Gestão Completa de marketplaces</title>
-<meta name="description" content="Estruturamos e gerimos a operação da sua marca nos marketplaces: Plano Escala (3 marketplaces) e Gestão Completa (6 marketplaces), com tráfego pago integrado.">
+<title>Gestor Weslen — Gestão de marketplaces e mentoria individual</title>
+<meta name="description" content="Estruturamos e gerimos a operação da sua marca nos marketplaces: Plano Escalado (até 3 marketplaces), Gestão Completa (até 6) e mentoria individual com o Weslen.">
 <meta name="theme-color" content="#070604">
 <meta property="og:title" content="Gestor Weslen — Sua empresa pronta para crescer nos marketplaces">
-<meta property="og:description" content="Plano Escala e Gestão Completa: estrutura, gestão e estratégia para vender nos marketplaces.">
+<meta property="og:description" content="Plano Escalado, Gestão Completa e mentoria individual: gestão mão na massa para vender nos marketplaces.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="assets/logo-gold.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,6 +19,7 @@ a { color: #E9C46A; }
 a:hover { color: #F6E2A8; }
 @property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 @property --n { syntax: '<integer>'; inherits: false; initial-value: 10; }
+@property --day { syntax: '<integer>'; inherits: false; initial-value: 30; }
 
 .gw { --gold-hi: color-mix(in oklab, var(--gold) 52%, #fff); --gold-lo: color-mix(in oklab, var(--gold) 68%, #000); --ink: #070604; --s1: #0D0B08; --line: color-mix(in oklab, var(--gold) 22%, transparent); --line2: rgba(244,239,228,.08); --tx: #F4EFE4; --mu: #ABA392; font-family: 'Hanken Grotesk', system-ui, sans-serif; color: var(--tx); background: var(--ink); overflow-x: clip; position: relative; -webkit-font-smoothing: antialiased; }
 .gw *, .gw *::before, .gw *::after { box-sizing: border-box; }
@@ -222,14 +223,29 @@ a:hover { color: #F6E2A8; }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li { font-size: 13px; padding: 8px 13px; border-radius: 999px; background: rgba(255,255,255,.04); border: 1px solid var(--line2); color: var(--tx); transition: border-color .3s, background .3s; }
 .chips li:hover { border-color: var(--line); background: rgba(212,175,55,.07); }
-.pn-r { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
-.it { display: flex; flex-direction: column; gap: 16px; padding: 22px; border-radius: 18px; border: 1px solid var(--line2); background: rgba(255,255,255,.015); transition: border-color .35s, transform .35s, background .35s; animation: itin .6s cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--d, 0s); }
-.it:hover { border-color: var(--line); transform: translateY(-4px); background: rgba(212,175,55,.045); }
-.it.wide { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 18px; }
+.hl { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.hl-c { display: flex; flex-direction: column; gap: 14px; padding: 22px; border-radius: 18px; border: 1px solid var(--line); background: linear-gradient(180deg, rgba(212,175,55,.08), rgba(212,175,55,.015)); transition: transform .35s, border-color .35s; animation: itin .6s cubic-bezier(.2,.7,.2,1) both; animation-delay: var(--d, 0s); }
+.hl-c:hover { transform: translateY(-4px); border-color: var(--gold); }
 @keyframes itin { from { opacity: 0; transform: translateY(16px); } }
-.it-n { font-family: 'Bricolage Grotesque', sans-serif; font-size: 14px; font-weight: 700; color: #1A1305; background: linear-gradient(180deg, var(--gold-hi), var(--gold)); width: 38px; height: 38px; flex: none; border-radius: 11px; display: grid; place-items: center; }
-.it-t { font-weight: 600; font-size: 16px; margin-bottom: 6px; line-height: 1.3; }
-.it-d { font-size: 14px; color: var(--mu); line-height: 1.55; }
+.hl-ic { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: rgba(212,175,55,.14); color: var(--gold); }
+.hl-t { font-weight: 600; font-size: 16px; line-height: 1.3; margin-bottom: 6px; }
+.hl-d { font-size: 14px; color: var(--mu); line-height: 1.55; }
+.inc { border-radius: 20px; border: 1px solid var(--line2); background: rgba(255,255,255,.015); padding: 28px 30px; }
+.inc-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px 24px; flex-wrap: wrap; margin-bottom: 14px; }
+.inc-t { font-family: 'Bricolage Grotesque', sans-serif; font-size: 21px; font-weight: 600; letter-spacing: -.02em; }
+.inc-s { font-size: 14px; color: var(--gold-hi); }
+.inc-l { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; }
+.inc-l li { display: flex; gap: 12px; align-items: flex-start; padding: 13px 0; border-top: 1px solid var(--line2); font-size: 15px; line-height: 1.45; animation: itin .5s cubic-bezier(.2,.7,.2,1) both; }
+.inc-l li:nth-child(2) { animation-delay: .05s; }
+.inc-l li:nth-child(3) { animation-delay: .1s; }
+.inc-l li:nth-child(4) { animation-delay: .15s; }
+.inc-l li:nth-child(5) { animation-delay: .2s; }
+.inc-l li:nth-child(6) { animation-delay: .25s; }
+.inc-l li:nth-child(7) { animation-delay: .3s; }
+.inc-l li:nth-child(8) { animation-delay: .35s; }
+.inc-l li:nth-child(9) { animation-delay: .4s; }
+.inc-l li:nth-child(10) { animation-delay: .45s; }
+.inc-l .ck { width: 22px; height: 22px; }
 .pn-foot { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-top: 32px; border-top: 1px solid var(--line2); flex-wrap: wrap; }
 .goal { display: flex; gap: 16px; align-items: flex-start; flex: 1 1 420px; max-width: 660px; }
 .goal .pn-k { margin-bottom: 6px; }
@@ -337,6 +353,72 @@ a:hover { color: #F6E2A8; }
 .ph-b1 { position: absolute; left: -36px; bottom: 96px; z-index: 2; }
 .ph-b2 { position: absolute; right: -28px; top: 64px; z-index: 2; }
 
+.mm-line { text-align: center; font-family: 'Bricolage Grotesque', sans-serif; font-size: clamp(20px, 2vw, 26px); font-weight: 600; letter-spacing: -.02em; line-height: 1.35; margin-top: 56px; padding: 0 12px; }
+
+/* mentoria */
+.band { background: radial-gradient(ellipse 55% 45% at 85% 12%, color-mix(in oklab, var(--gold) 10%, transparent), transparent 70%), #090705; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); }
+.mt-top { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 72px; align-items: center; }
+.mt-l { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; }
+.mt-l .h2 { max-width: 16ch; }
+.mt-lead { font-size: 21px; line-height: 1.35; font-weight: 500; letter-spacing: -.01em; color: var(--tx); max-width: 34ch; }
+.mt-note { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; line-height: 1.55; color: var(--tx); padding: 14px 16px; border-radius: 14px; border: 1px solid var(--line); background: rgba(212,175,55,.05); max-width: 54ch; }
+.mt-note .ic { color: var(--gold); margin-top: 2px; }
+.facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; width: 100%; }
+.fact { padding: 16px 18px; border-radius: 16px; border: 1px solid var(--line2); background: rgba(255,255,255,.015); transition: border-color .3s; }
+.fact:hover { border-color: var(--line); }
+.fact b { display: block; font-family: 'Bricolage Grotesque', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -.03em; line-height: 1; }
+.fact span { display: block; font-size: 13px; color: var(--mu); margin-top: 8px; line-height: 1.4; }
+.mt-vis { border-radius: 28px; padding: 30px; box-shadow: 0 50px 120px -60px color-mix(in oklab, var(--gold) 60%, transparent); }
+.mv-h { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 18px; }
+.mv-t { font-size: 20px; font-weight: 600; }
+.mv-s { font-size: 13px; color: var(--mu); margin-top: 4px; }
+.day { font-variant-numeric: tabular-nums; display: inline-block; min-width: 2ch; text-align: center; }
+.day::after { counter-reset: d var(--day); content: counter(d); animation: days 9s linear infinite; }
+@keyframes days { 0%, 6% { --day: 1; } 84%, 100% { --day: 30; } }
+.dbar { height: 6px; border-radius: 3px; background: rgba(255,255,255,.06); overflow: hidden; margin-bottom: 22px; }
+.dbar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--gold-lo), var(--gold-hi)); transform-origin: left; animation: dfill 9s linear infinite; }
+@keyframes dfill { 0%, 6% { transform: scaleX(.03); opacity: 1; } 84%, 94% { transform: scaleX(1); opacity: 1; } 100% { transform: scaleX(1); opacity: .2; } }
+.mtg { position: relative; display: flex; flex-direction: column; gap: 6px; }
+.mtg::before { content: ''; position: absolute; left: 19px; top: 22px; bottom: 22px; width: 1px; background: linear-gradient(180deg, var(--line), var(--line2)); }
+.mr { position: relative; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 14px; padding: 8px 0; }
+.mn { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); background: #0D0B08; font-family: 'Bricolage Grotesque', sans-serif; font-weight: 700; font-size: 14px; color: var(--mu); animation: var(--k) 9s linear infinite; }
+@keyframes m1 { 0%, 6% { background: #0D0B08; color: var(--mu); border-color: var(--line); box-shadow: none; } 8%, 94% { background: var(--gold); color: #1A1305; border-color: var(--gold); box-shadow: 0 0 22px -4px var(--gold); } 100% { background: #0D0B08; color: var(--mu); } }
+@keyframes m2 { 0%, 25% { background: #0D0B08; color: var(--mu); border-color: var(--line); box-shadow: none; } 27%, 94% { background: var(--gold); color: #1A1305; border-color: var(--gold); box-shadow: 0 0 22px -4px var(--gold); } 100% { background: #0D0B08; color: var(--mu); } }
+@keyframes m3 { 0%, 44% { background: #0D0B08; color: var(--mu); border-color: var(--line); box-shadow: none; } 46%, 94% { background: var(--gold); color: #1A1305; border-color: var(--gold); box-shadow: 0 0 22px -4px var(--gold); } 100% { background: #0D0B08; color: var(--mu); } }
+@keyframes m4 { 0%, 63% { background: #0D0B08; color: var(--mu); border-color: var(--line); box-shadow: none; } 65%, 94% { background: var(--gold); color: #1A1305; border-color: var(--gold); box-shadow: 0 0 22px -4px var(--gold); } 100% { background: #0D0B08; color: var(--mu); } }
+.mr-t { font-weight: 600; font-size: 15px; }
+.mr-s { font-size: 13px; color: var(--mu); margin-top: 2px; }
+.mr-tag { font-size: 12px; font-weight: 600; color: var(--gold-hi); border: 1px solid var(--line); padding: 4px 10px; border-radius: 999px; }
+.mv-wa { margin-top: 18px; display: flex; gap: 12px; align-items: center; padding: 14px 16px; border-radius: 16px; border: 1px solid var(--line); background: rgba(212,175,55,.06); font-size: 14px; }
+.mv-wa small { display: block; color: var(--mu); font-size: 12px; margin-top: 2px; }
+.typing { display: flex; gap: 4px; margin-left: auto; }
+.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: typ 1.2s ease-in-out infinite; }
+.typing i:nth-child(2) { animation-delay: .15s; }
+.typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes typ { 0%, 60%, 100% { transform: none; opacity: .35; } 30% { transform: translateY(-4px); opacity: 1; } }
+.mt-inc { margin-top: 112px; }
+.mt-inc .sec-head { margin-bottom: 40px; }
+.mi-g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.mi { padding: 26px; border-radius: 20px; border: 1px solid var(--line2); background: #0B0907; display: flex; flex-direction: column; gap: 14px; transition: border-color .35s, transform .35s; }
+.mi:hover { border-color: var(--line); transform: translateY(-4px); }
+.mi-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.mi-ic { width: 46px; height: 46px; border-radius: 14px; display: grid; place-items: center; background: rgba(212,175,55,.12); color: var(--gold); }
+.mi-n { font-family: 'Bricolage Grotesque', sans-serif; font-size: 13px; font-weight: 600; color: var(--mu); }
+.mi-t { font-weight: 600; font-size: 17px; line-height: 1.3; }
+.mi-d { font-size: 14.5px; color: var(--mu); line-height: 1.6; }
+.mt-bot { margin-top: 14px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 14px; }
+.mt-for, .mt-obj { border-radius: 24px; padding: 34px; border: 1px solid var(--line2); background: #0B0907; }
+.mt-obj { border-color: var(--line); background: radial-gradient(ellipse 80% 70% at 100% 0%, color-mix(in oklab, var(--gold) 14%, transparent), transparent 70%), #0B0907; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; }
+.mt-ht { font-size: 24px; font-weight: 600; line-height: 1.2; margin-bottom: 18px; }
+.mt-obj .mt-ht { margin-bottom: 0; }
+.for-l li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid var(--line2); font-size: 15px; line-height: 1.5; }
+.for-l li:first-child { border-top: 0; padding-top: 0; }
+.for-l .ck { width: 22px; height: 22px; }
+.mt-q { font-size: 17px; line-height: 1.6; color: var(--tx); }
+.tagl { display: flex; flex-direction: column; gap: 10px; padding: 18px 0; border-top: 1px solid var(--line2); border-bottom: 1px solid var(--line2); width: 100%; }
+.tagl span { display: flex; align-items: center; gap: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
+.tagl span::before { content: ''; width: 7px; height: 7px; transform: rotate(45deg); background: var(--gold); flex: none; }
+
 /* faq */
 .faq { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 72px; align-items: start; }
 .faq-l { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
@@ -421,7 +503,9 @@ a:hover { color: #F6E2A8; }
   .mk-grid { grid-template-columns: minmax(0, 1fr); }
   .pn { padding: 30px 24px; gap: 32px; }
   .pn-top { grid-template-columns: minmax(0, 1fr); gap: 28px; }
-  .pn-r { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mt-top { grid-template-columns: minmax(0, 1fr); gap: 48px; }
+  .mi-g { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mt-bot { grid-template-columns: minmax(0, 1fr); }
   .split { grid-template-columns: minmax(0, 1fr); }
   .sp-mid { height: 140px; }
   .sp-line { left: 50%; right: auto; top: 0; bottom: 0; width: 1px; height: auto; background: linear-gradient(180deg, var(--line), var(--gold), var(--line)); }
@@ -445,15 +529,22 @@ a:hover { color: #F6E2A8; }
   .tab-mk { grid-column: 1; grid-row: auto; justify-self: start; font-size: 11px; padding: 4px 8px; }
   .h3 { font-size: 28px; }
   .pn-side { padding: 18px; }
-  .it { padding: 18px; gap: 12px; }
+  .hl-c { padding: 18px; }
+  .inc { padding: 22px 18px; }
+  .inc-l { grid-template-columns: minmax(0, 1fr); }
   .pn-foot { padding-top: 24px; gap: 20px; }
   .pn-foot .btn { width: 100%; }
   .cta .ctas { flex-direction: column; width: 100%; }
   .cta .btn { width: 100%; }
   .cta .micro { gap: 10px 18px; }
   .cta-logo { width: 92px; }
-  .pn-r { grid-template-columns: minmax(0, 1fr); }
-  .it.wide { flex-direction: column; align-items: flex-start; }
+  .mi-g { grid-template-columns: minmax(0, 1fr); }
+  .fact { padding: 14px 12px; }
+  .fact b { font-size: 24px; }
+  .mt-vis { padding: 22px 18px; }
+  .mt-for, .mt-obj { padding: 26px 20px; }
+  .mt-l .btn, .mt-obj .btn { width: 100%; }
+  .tagl span { font-size: 16px; }
   .stats { grid-template-columns: minmax(0, 1fr); }
   .sp-card { padding: 28px 22px; }
   .trf { padding: 28px 22px; }
@@ -481,6 +572,7 @@ a:hover { color: #F6E2A8; }
 <a href="#planos">Planos</a>
 <a href="#como-funciona">Como funciona</a>
 <a href="#sobre">Sobre</a>
+<a href="#mentoria">Mentoria</a>
 <a href="#faq">Dúvidas</a>
 </nav>
 <a class="btn btn-gold btn-sm nav-cta" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20quero%20minha%20an%C3%A1lise%20gratuita.">Análise gratuita</a>
@@ -498,7 +590,7 @@ a:hover { color: #F6E2A8; }
 <div class="beam b3"></div>
 </div>
 <div class="wrap hero-in">
-<a class="badge ld" style="--d: .05s" href="#planos"><span class="badge-tag">Novo</span> Conheça o Plano Escala <svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<a class="badge ld" style="--d: .05s" href="#planos"><span class="badge-tag">Novo</span> Conheça o Plano Escalado <svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <h1 class="d h1"><span class="w" style="--d: .15s">Sua</span> <span class="w" style="--d: .22s">empresa</span> <span class="w" style="--d: .29s">pronta</span> <span class="w" style="--d: .36s">para</span> <span class="w" style="--d: .43s"><span class="shine">crescer</span></span> <span class="w" style="--d: .5s">nos</span> <span class="w" style="--d: .57s">marketplaces.</span></h1>
 <p class="lead ld" style="--d: .7s">Estruturamos e gerimos a operação online da sua marca, da criação das lojas ao crescimento das vendas. Você foca na produção, no estoque e na logística.</p>
 <div class="ctas ld" style="--d: .85s">
@@ -527,7 +619,7 @@ a:hover { color: #F6E2A8; }
 </div>
 <div class="mock-main">
 <div class="mk-head">
-<div><p class="mk-eb">Plano Escala</p><p class="d mk-tt">Sua operação, etapa por etapa</p></div>
+<div><p class="mk-eb">Plano Escalado</p><p class="d mk-tt">Sua operação, etapa por etapa</p></div>
 <span class="live"><span class="pulse"></span>Em andamento</span>
 </div>
 <div class="mk-grid">
@@ -592,11 +684,11 @@ a:hover { color: #F6E2A8; }
 <div class="sec-head rv">
 <p class="eyebrow">Planos</p>
 <h2 class="d h2">Escolha o caminho certo para o seu momento.</h2>
-<p class="sub">Dois planos, um para cada fase: começar com 3 marketplaces ou ter a gestão completa nos 6. Clique e veja o que está incluído.</p>
+<p class="sub">Dois planos de gestão mão na massa: até 3 marketplaces à sua escolha ou a estrutura completa com até 6. Clique e veja o que está incluído.</p>
 </div>
 <div class="tabs" role="tablist" aria-label="Planos">
-<button class="tab on" type="button" role="tab" id="tab-escala" aria-controls="pane-escala" aria-selected="true" data-tab="escala"><span class="tab-t">Plano Escala</span><span class="tab-s">Quero começar ou expandir</span><span class="tab-mk">3 marketplaces</span></button>
-<button class="tab" type="button" role="tab" id="tab-gestao" aria-controls="pane-gestao" aria-selected="false" tabindex="-1" data-tab="gestao"><span class="tab-t">Gestão Completa</span><span class="tab-s">Já vendo e quero profissionalizar</span><span class="tab-mk">6 marketplaces</span></button>
+<button class="tab on" type="button" role="tab" id="tab-escala" aria-controls="pane-escala" aria-selected="true" data-tab="escala"><span class="tab-t">Plano Escalado</span><span class="tab-s">Para começar ou expandir</span><span class="tab-mk">Até 3 marketplaces</span></button>
+<button class="tab" type="button" role="tab" id="tab-gestao" aria-controls="pane-gestao" aria-selected="false" tabindex="-1" data-tab="gestao"><span class="tab-t">Gestão Completa</span><span class="tab-s">Estrutura completa + site próprio</span><span class="tab-mk">Até 6 marketplaces</span></button>
 </div>
 <div class="panel glow">
 
@@ -604,32 +696,43 @@ a:hover { color: #F6E2A8; }
 <div class="pn">
 <div class="pn-top">
 <div class="pn-intro">
-<span class="pn-tag">Implantação · para começar ou expandir</span>
-<h3 class="d h3">Plano <span class="gold">Escala</span></h3>
-<p class="pn-lead">Para fábricas, marcas, distribuidores e lojistas que querem entrar no digital ou expandir as vendas. A nossa equipe estrutura a operação online do seu negócio em 3 marketplaces, e você não precisa executar todo o processo sozinho.</p>
+<span class="pn-tag">Gestão e execução · até 3 marketplaces</span>
+<h3 class="d h3">Plano <span class="gold">Escalado</span></h3>
+<p class="pn-lead">Você escolhe até 3 marketplaces e conta com todo o suporte do nosso time durante o projeto, com especialistas nas principais plataformas de venda e a assessoria direta do Weslen no direcionamento estratégico da sua operação. Feito para quem quer começar a vender ou expandir as vendas nos marketplaces.</p>
 </div>
 <div class="pn-side">
 <div>
-<div class="meter-h"><p class="pn-k">Marketplaces no plano</p><b class="gold">3 de 6</b></div>
-<div class="seg" aria-hidden="true"><i class="on" style="--d: .2s"></i><i class="on" style="--d: .35s"></i><i class="on" style="--d: .5s"></i><i></i><i></i><i></i></div>
+<div class="meter-h"><p class="pn-k">Marketplaces no plano</p><b class="gold">Até 3</b></div>
+<div class="seg" aria-hidden="true"><i class="on" style="--d: 0.2s"></i><i class="on" style="--d: 0.3s"></i><i class="on" style="--d: 0.4s"></i><i></i><i></i><i></i></div>
+<p class="seg-names"><span>Você escolhe até 3 entre TikTok Shop, Temu, Kwai, Mercado Livre, Shopee e Shein</span></p>
 </div>
 <div>
 <p class="pn-k">Indicado para</p>
-<ul class="chips"><li>Fábricas que querem vender direto</li><li>Marcas próprias</li><li>Distribuidores em busca de novos canais</li><li>Lojistas começando nos marketplaces</li><li>Empresas estruturando o online</li></ul>
+<ul class="chips"><li>Fábricas que querem vender direto</li><li>Marcas próprias</li><li>Distribuidores em busca de novos canais</li><li>Lojistas começando nos marketplaces</li></ul>
 </div>
 </div>
 </div>
-<ol class="pn-r">
-<li class="it" style="--d: .05s"><span class="it-n">01</span><div><p class="it-t">Estruturação em 3 marketplaces</p><p class="it-d">Preparação e organização da operação nos três marketplaces definidos para o projeto.</p></div></li>
-<li class="it" style="--d: .12s"><span class="it-n">02</span><div><p class="it-t">Estruturação das lojas</p><p class="it-d">Configuração e organização das contas para iniciar ou desenvolver as vendas.</p></div></li>
-<li class="it" style="--d: .19s"><span class="it-n">03</span><div><p class="it-t">Cadastro de produtos</p><p class="it-d">Criação dos anúncios com informações, características e variações dos produtos.</p></div></li>
-<li class="it" style="--d: .26s"><span class="it-n">04</span><div><p class="it-t">Otimização de anúncios</p><p class="it-d">Apresentação dos produtos mais atrativa e competitiva.</p></div></li>
-<li class="it" style="--d: .33s"><span class="it-n">05</span><div><p class="it-t">Estratégias comerciais</p><p class="it-d">Ações para melhorar o posicionamento dos produtos e explorar oportunidades de venda.</p></div></li>
-<li class="it" style="--d: .4s"><span class="it-n">06</span><div><p class="it-t">Gestão estratégica</p><p class="it-d">Acompanhamento das atividades do projeto para desenvolver e aprimorar a operação.</p></div></li>
-</ol>
+<div class="hl">
+<div class="hl-c" style="--d: 0.05s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18M3 9v11h18V9M9 20v-6h6v6"></path></svg></span><div><p class="hl-t">Até 3 marketplaces</p><p class="hl-d">Você escolhe as plataformas de acordo com o seu projeto.</p></div></div>
+<div class="hl-c" style="--d: 0.12s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span><div><p class="hl-t">Equipe de especialistas</p><p class="hl-d">Profissionais nas principais plataformas de venda trabalhando com você.</p></div></div>
+<div class="hl-c" style="--d: 0.19s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M8.2 13.4L7 22l5-3 5 3-1.2-8.6"></path></svg></span><div><p class="hl-t">Assessoria do especialista master</p><p class="hl-d">Weslen Thomaz no direcionamento estratégico da sua operação.</p></div></div>
+</div>
+<div class="inc">
+<div class="inc-h"><p class="inc-t">Mão na massa na sua operação</p><p class="inc-s">Você não vai estar sozinho nessa jornada.</p></div>
+<ul class="inc-l">
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Estruturação e organização das lojas</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Cadastro e organização dos produtos</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Otimização de anúncios, títulos e descrições</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Organização e melhoria da operação nos marketplaces</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Gestão e otimização de campanhas de Ads</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Planejamento e acompanhamento de promoções</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Análise de métricas e desempenho das lojas</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Estratégias para aumentar as vendas e melhorar os resultados</span></li>
+</ul>
+</div>
 <div class="pn-foot">
-<div class="goal"><span class="gicon"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><div><p class="pn-k">Nosso objetivo</p><p>Transformar o potencial dos seus produtos em uma operação de vendas online estruturada, com planejamento, gestão especializada e foco no crescimento.</p></div></div>
-<a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20interesse%20no%20Plano%20Escala.">Quero o Plano Escala <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div class="goal"><span class="gicon"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><div><p class="pn-k">Nosso objetivo</p><p>Ajudar você a organizar sua operação, conquistar espaço nos marketplaces e construir uma estrutura preparada para crescer.</p></div></div>
+<a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20interesse%20no%20Plano%20Escalado.">Quero o Plano Escalado <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
 </div>
@@ -638,33 +741,45 @@ a:hover { color: #F6E2A8; }
 <div class="pn">
 <div class="pn-top">
 <div class="pn-intro">
-<span class="pn-tag">Recorrente · para quem já vende</span>
+<span class="pn-tag">Do planejamento à execução · até 6 marketplaces</span>
 <h3 class="d h3">Gestão <span class="gold">Completa</span></h3>
-<p class="pn-lead">Para quem já vende e quer profissionalizar, com presença nos 6 grandes marketplaces. A equipe Gestor Weslen assume a gestão prevista em contrato, mantém a operação organizada e desenvolve estratégias para melhorar o desempenho. Você continua no comando do negócio e participa das decisões.</p>
+<p class="pn-lead">Gestão completa em até 6 marketplaces, com uma equipe especializada em cada plataforma e a assessoria direta do Weslen acompanhando a estratégia e a evolução da sua operação. Uma estrutura profissional sem você precisar montar um time interno de especialistas.</p>
 </div>
 <div class="pn-side">
 <div>
-<div class="meter-h"><p class="pn-k">Marketplaces no plano</p><b class="gold">6 de 6</b></div>
-<div class="seg" aria-hidden="true"><i class="on" style="--d: .2s"></i><i class="on" style="--d: .3s"></i><i class="on" style="--d: .4s"></i><i class="on" style="--d: .5s"></i><i class="on" style="--d: .6s"></i><i class="on" style="--d: .7s"></i></div>
+<div class="meter-h"><p class="pn-k">Marketplaces no plano</p><b class="gold">Até 6</b></div>
+<div class="seg" aria-hidden="true"><i class="on" style="--d: 0.2s"></i><i class="on" style="--d: 0.3s"></i><i class="on" style="--d: 0.4s"></i><i class="on" style="--d: 0.5s"></i><i class="on" style="--d: 0.6s"></i><i class="on" style="--d: 0.7s"></i></div>
 <p class="seg-names"><span>TikTok Shop</span><span>Temu</span><span>Kwai</span><span>Mercado Livre</span><span>Shopee</span><span>Shein</span></p>
 </div>
 <div>
 <p class="pn-k">Indicado para</p>
-<ul class="chips"><li>Lojistas que já vendem em marketplaces</li><li>Empresas profissionalizando o online</li><li>Marcas que precisam melhorar a gestão</li><li>Negócios em expansão</li><li>Quem quer especialistas ao lado</li></ul>
+<ul class="chips"><li>Lojistas que já vendem em marketplaces</li><li>Empresas que querem profissionalizar o online</li><li>Marcas em expansão</li><li>Quem quer estrutura sem montar time interno</li></ul>
 </div>
 </div>
 </div>
-<ol class="pn-r">
-<li class="it" style="--d: .05s"><span class="it-n">01</span><div><p class="it-t">Gestão em 6 marketplaces</p><p class="it-d">Administração estratégica de todos os canais de venda incluídos no contrato.</p></div></li>
-<li class="it" style="--d: .11s"><span class="it-n">02</span><div><p class="it-t">Cadastro e atualização de produtos</p><p class="it-d">Informações organizadas e anúncios mantidos conforme a operação pede.</p></div></li>
-<li class="it" style="--d: .17s"><span class="it-n">03</span><div><p class="it-t">Otimização de anúncios</p><p class="it-d">Títulos, descrições, imagens e demais elementos aprimorados.</p></div></li>
-<li class="it" style="--d: .23s"><span class="it-n">04</span><div><p class="it-t">Estratégias comerciais</p><p class="it-d">Ações para aumentar a competitividade e aproveitar oportunidades de venda.</p></div></li>
-<li class="it" style="--d: .29s"><span class="it-n">05</span><div><p class="it-t">Análise de desempenho</p><p class="it-d">Acompanhamento de indicadores para encontrar pontos de melhoria.</p></div></li>
-<li class="it" style="--d: .35s"><span class="it-n">06</span><div><p class="it-t">Otimização da operação</p><p class="it-d">Processos de gestão mais eficientes no dia a dia.</p></div></li>
-<li class="it wide" style="--d: .41s"><span class="it-n">07</span><div><p class="it-t">Acompanhamento estratégico</p><p class="it-d">Avaliação da evolução da loja e planejamento de estratégias de acordo com os objetivos do negócio.</p></div></li>
-</ol>
+<div class="hl">
+<div class="hl-c" style="--d: 0.05s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span><div><p class="hl-t">Até 6 marketplaces</p><p class="hl-d">TikTok Shop, Temu, Kwai, Mercado Livre, Shopee e Shein.</p></div></div>
+<div class="hl-c" style="--d: 0.12s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg></span><div><p class="hl-t">Integração com 1 site próprio</p><p class="hl-d">Caso sua empresa já tenha um e-commerce.</p></div></div>
+<div class="hl-c" style="--d: 0.19s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span><div><p class="hl-t">Especialistas por plataforma</p><p class="hl-d">Conhecimento direcionado às particularidades de cada marketplace.</p></div></div>
+<div class="hl-c" style="--d: 0.26s"><span class="hl-ic"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M8.2 13.4L7 22l5-3 5 3-1.2-8.6"></path></svg></span><div><p class="hl-t">Assessoria do especialista master</p><p class="hl-d">Weslen Thomaz acompanhando a estratégia e a evolução da operação.</p></div></div>
+</div>
+<div class="inc">
+<div class="inc-h"><p class="inc-t">Mão na massa na sua operação</p><p class="inc-s">Execução e acompanhamento contínuo.</p></div>
+<ul class="inc-l">
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Estruturação e organização das lojas</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Cadastro e organização de produtos</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Otimização de anúncios, títulos, descrições e informações dos produtos</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Organização e melhoria da estrutura operacional</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Gestão e otimização de campanhas de Ads</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Planejamento, criação e acompanhamento de promoções</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Análise de métricas, desempenho e resultados</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Estratégias para aumentar as vendas e a performance</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Identificação de oportunidades de crescimento e escala</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Acompanhamento contínuo da evolução da operação</span></li>
+</ul>
+</div>
 <div class="pn-foot">
-<div class="goal"><span class="gicon"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><div><p class="pn-k">Nosso objetivo</p><p>Profissionalizar a operação, otimizar processos e criar condições para o crescimento sustentável das vendas online.</p></div></div>
+<div class="goal"><span class="gicon"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><div><p class="pn-k">Nosso objetivo</p><p>Ajudar sua empresa a estruturar, desenvolver e escalar suas vendas no digital, com estratégia, organização e execução.</p></div></div>
 <a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20interesse%20na%20Gest%C3%A3o%20Completa.">Quero a Gestão Completa <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
@@ -691,32 +806,33 @@ a:hover { color: #F6E2A8; }
 <div class="wrap">
 <div class="sec-head rv">
 <p class="eyebrow">Como funciona</p>
-<h2 class="d h2">Cada um no que faz de <span class="gold">melhor</span>.</h2>
-<p class="sub">A nossa equipe cuida da estruturação e da gestão. Você concentra os esforços na produção, no estoque e na logística.</p>
+<h2 class="d h2">Nossa gestão é <span class="gold">mão na massa</span>.</h2>
+<p class="sub">Não trabalhamos apenas com orientações ou recomendações. Nossa equipe entra na operação, executa as estratégias e acompanha a evolução do projeto com você.</p>
 </div>
 <div class="split">
 <div class="sp-card us rv2">
-<div class="sp-h"><span class="sp-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span><div><p class="sp-t">Nossa equipe cuida</p><p class="sp-s">Estrutura, estratégia e gestão</p></div></div>
+<div class="sp-h"><span class="sp-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"></path></svg></span><div><p class="sp-t">Nossa equipe executa</p><p class="sp-s">Gestão, otimizações e crescimento</p></div></div>
 <ul class="sp-list">
-<li style="--d: 0s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Estruturação das lojas e contas</li>
-<li style="--d: 1.2s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Cadastro e atualização de produtos</li>
-<li style="--d: 2.4s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Otimização dos anúncios</li>
-<li style="--d: 3.6s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Estratégias comerciais</li>
-<li style="--d: 4.8s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Análise de desempenho e acompanhamento</li>
+<li style="--d: 0s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Estruturação e organização das lojas</li>
+<li style="--d: 1.2s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Cadastro e otimização dos anúncios</li>
+<li style="--d: 2.4s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Gestão de Ads e promoções</li>
+<li style="--d: 3.6s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Análise de métricas e desempenho</li>
+<li style="--d: 4.8s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Estratégias para vender mais</li>
 </ul>
 </div>
 <div class="sp-mid" aria-hidden="true"><div class="sp-line"></div><div class="sp-med"><span class="orbit o-a"></span><span class="orbit o-b"></span><img src="assets/logo-gold.png" alt=""></div></div>
 <div class="sp-card you rv3">
-<div class="sp-h"><span class="sp-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7M5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg></span><div><p class="sp-t">Você cuida</p><p class="sp-s">Produto, estoque e envio</p></div></div>
+<div class="sp-h"><span class="sp-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7M5.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM18.5 21a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg></span><div><p class="sp-t">Você acompanha</p><p class="sp-s">E cuida do seu negócio</p></div></div>
 <ul class="sp-list">
-<li style="--d: .6s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Manter os produtos disponíveis</li>
-<li style="--d: 1.8s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Separar os pedidos</li>
-<li style="--d: 3s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Realizar a expedição</li>
-<li style="--d: 4.2s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Participar das decisões do negócio</li>
+<li style="--d: .6s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Estoque e mercadorias</li>
+<li style="--d: 1.8s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Separação e expedição dos pedidos</li>
+<li style="--d: 3s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Acompanhamento da operação</li>
+<li style="--d: 4.2s"><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span>Processos internos do negócio</li>
 </ul>
-<p class="sp-foot">As responsabilidades de estoque, separação e expedição seguem o fluxo operacional acordado em contrato.</p>
+<p class="sp-foot">Sem precisar montar uma equipe interna de especialistas para cada plataforma.</p>
 </div>
 </div>
+<p class="mm-line rv">Não estamos aqui apenas para mostrar o caminho. <span class="gold">Entramos na operação com você.</span></p>
 </div>
 </section>
 
@@ -764,9 +880,9 @@ a:hover { color: #F6E2A8; }
 <h2 class="d h2">Mais de <span class="gold cnt" aria-hidden="true"></span><span class="sr">10</span> anos ativando vendas online.</h2>
 <p class="ab-p">Sou o <strong>Weslen Thomaz</strong>, especialista em tráfego pago e gestão de marketplace. Ao lado da minha equipe, ajudo empresas a crescerem de forma estruturada, previsível e sustentável, sem promessas exageradas.</p>
 <div class="stats">
-<div class="stat"><p class="stat-v gold">6</p><p class="stat-l">marketplaces atendidos pela equipe</p></div>
-<div class="stat"><p class="stat-v gold">2</p><p class="stat-l">planos: Escala e Gestão Completa</p></div>
-<div class="stat"><p class="stat-v gold">1:1</p><p class="stat-l">acompanhamento direto do Weslen</p></div>
+<div class="stat"><p class="stat-v gold">6</p><p class="stat-l">marketplaces com especialistas dedicados</p></div>
+<div class="stat"><p class="stat-v gold">2</p><p class="stat-l">planos de gestão mão na massa</p></div>
+<div class="stat"><p class="stat-v gold">1:1</p><p class="stat-l">mentoria e assessoria direta</p></div>
 </div>
 <p class="sig" aria-hidden="true">Weslen Thomaz</p>
 <a class="btn btn-ghost" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20quero%20falar%20com%20voc%C3%AA.">Falar com o Weslen <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
@@ -778,6 +894,71 @@ a:hover { color: #F6E2A8; }
 </div>
 <div class="ph-b1" aria-hidden="true"><div class="fchip" style="--fd: 0s; --gd: 1s"><span class="fic"><svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></span><span>Tráfego e marketplace<small>Meta Ads · TikTok Ads</small></span></div></div>
 <div class="ph-b2" aria-hidden="true"><div class="fchip" style="--fd: -3s; --gd: 5s"><span class="fic"><svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"></path></svg></span><span>Atendimento direto<small>Pelo WhatsApp</small></span></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec band" id="mentoria">
+<div class="wrap">
+<div class="mt-top">
+<div class="mt-l rv">
+<p class="eyebrow">Mentoria individual</p>
+<h2 class="d h2">Mentoria individual com o <span class="gold">Weslen</span>.</h2>
+<p class="d mt-lead">Estratégia, direcionamento e acompanhamento para você crescer nos marketplaces.</p>
+<p class="ab-p">Você não precisa continuar tentando descobrir sozinho o que funciona, o que precisa ser ajustado ou qual é o próximo passo. Na mentoria, eu acompanho você de perto, entendo a realidade do seu negócio e mostro, na prática, como estruturar e otimizar a sua operação.</p>
+<p class="mt-note"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg><span>Não é uma aula genérica. É um acompanhamento individual para você entender o que fazer, como fazer e por onde começar.</span></p>
+<div class="facts">
+<div class="fact"><b class="gold">30</b><span>dias de acompanhamento</span></div>
+<div class="fact"><b class="gold">4</b><span>reuniões individuais de 1 hora</span></div>
+<div class="fact"><b class="gold">1:1</b><span>suporte direto pelo WhatsApp</span></div>
+</div>
+<a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20interesse%20na%20mentoria%20individual.">Quero minha mentoria individual <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="mt-vis glow rv2" role="img" aria-label="Ilustração da mentoria: 30 dias de acompanhamento, quatro encontros individuais de uma hora e suporte pelo WhatsApp">
+<div class="mv-h"><div><p class="d mv-t">Sua mentoria</p><p class="mv-s">Acompanhamento individual</p></div><span class="live"><span class="pulse"></span>Dia <span class="day"></span> de 30</span></div>
+<div class="dbar"><i></i></div>
+<div class="mtg">
+<div class="mr"><span class="mn" style="--k: m1">01</span><div><p class="mr-t">Encontro 1</p><p class="mr-s">Reunião individual com o Weslen</p></div><span class="mr-tag">1h</span></div>
+<div class="mr"><span class="mn" style="--k: m2">02</span><div><p class="mr-t">Encontro 2</p><p class="mr-s">Reunião individual com o Weslen</p></div><span class="mr-tag">1h</span></div>
+<div class="mr"><span class="mn" style="--k: m3">03</span><div><p class="mr-t">Encontro 3</p><p class="mr-s">Reunião individual com o Weslen</p></div><span class="mr-tag">1h</span></div>
+<div class="mr"><span class="mn" style="--k: m4">04</span><div><p class="mr-t">Encontro 4</p><p class="mr-s">Reunião individual com o Weslen</p></div><span class="mr-tag">1h</span></div>
+</div>
+<div class="mv-wa"><span class="fic"><svg class="ic" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"></path></svg></span><span>Suporte pelo WhatsApp<small>Durante os 30 dias da mentoria</small></span><span class="typing"><i></i><i></i><i></i></span></div>
+</div>
+</div>
+<div class="mt-inc">
+<div class="sec-head rv">
+<p class="eyebrow">O que está incluído</p>
+<h2 class="d h2">Tudo o que você leva na mentoria.</h2>
+</div>
+<div class="mi-g">
+<div class="mi rv"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span><span class="mi-n">01</span></div><p class="mi-t">Quatro reuniões individuais de uma hora</p><p class="mi-d">Quatro encontros exclusivos ao longo de 30 dias, com direcionamento personalizado para as necessidades do seu negócio.</p></div>
+<div class="mi rv2"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M21 21l-4.3-4.3"></path></svg></span><span class="mi-n">02</span></div><p class="mi-t">Análise e direcionamento da sua operação</p><p class="mi-d">Avaliação das suas contas para identificar oportunidades de melhoria e os ajustes que podem desenvolver as suas vendas.</p></div>
+<div class="mi rv3"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"></path><circle cx="15" cy="6" r="2"></circle><circle cx="9" cy="12" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></span><span class="mi-n">03</span></div><p class="mi-t">Orientação prática sobre anúncios</p><p class="mi-d">Como estruturar seus anúncios e trabalhar títulos, descrições, imagens e ofertas para melhorar a apresentação dos produtos.</p></div>
+<div class="mi rv"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9M3 9h18M3 9v11h18V9M9 20v-6h6v6"></path></svg></span><span class="mi-n">04</span></div><p class="mi-t">Estratégias para cada marketplace</p><p class="mi-d">Como trabalhar cada conta, quais recursos explorar e quais estratégias fazem sentido nas plataformas que você usa.</p></div>
+<div class="mi rv2"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"></path></svg></span><span class="mi-n">05</span></div><p class="mi-t">Esclarecimento das suas dúvidas</p><p class="mi-d">Traga suas dificuldades e situações reais do seu negócio para tomar decisões com mais segurança.</p></div>
+<div class="mi rv3"><div class="mi-top"><span class="mi-ic"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"></path></svg></span><span class="mi-n">06</span></div><p class="mi-t">Suporte pelo WhatsApp durante 30 dias</p><p class="mi-d">Para tirar dúvidas sobre as orientações e receber direcionamento para seguir com o seu plano de ação.</p></div>
+</div>
+<div class="mt-bot">
+<div class="mt-for rv">
+<p class="d mt-ht">Para quem é a mentoria</p>
+<ul class="for-l">
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Está começando a vender nos marketplaces e quer evitar erros comuns.</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Já vende, mas sente dificuldade para aumentar o faturamento.</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Precisa melhorar a estrutura e a qualidade dos anúncios.</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Investe em publicidade, mas tem dúvidas sobre como otimizar as campanhas.</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Quer entender melhor as ferramentas e oportunidades de cada plataforma.</span></li>
+<li><span class="ck"><svg class="ic" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg></span><span>Precisa de um direcionamento claro para evoluir a operação.</span></li>
+</ul>
+</div>
+<div class="mt-obj rv2">
+<p class="eyebrow">Meu objetivo</p>
+<p class="d mt-ht">Dar clareza ao seu próximo passo.</p>
+<p class="mt-q">A proposta não é apenas responder às suas dúvidas, mas ajudar você a desenvolver o conhecimento necessário para conduzir sua operação com mais estratégia e autonomia.</p>
+<div class="tagl"><span>Quatro encontros individuais</span><span>Trinta dias de acompanhamento</span><span>Um direcionamento personalizado</span></div>
+<a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20interesse%20na%20mentoria%20individual.">Quero minha mentoria individual <svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -795,9 +976,11 @@ a:hover { color: #F6E2A8; }
 <div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-1"><span>Em quanto tempo minha loja fica pronta?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-1" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
 <div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-2"><span>Existe contrato mínimo ou fidelidade?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-2" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
 <div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-3"><span>O investimento em anúncios está incluso?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-3" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-4"><span>Em quais marketplaces vocês atuam?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-4" hidden>Atuamos em TikTok Shop, Temu, Kwai, Mercado Livre, Shopee e Shein. No Plano Escala, estruturamos a operação em 3 marketplaces. Na Gestão Completa, cuidamos dos 6.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-5"><span>Quem cuida do estoque e do envio?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-5" hidden>Você mantém os produtos disponíveis, separa os pedidos e faz a expedição, conforme o fluxo operacional acordado. A nossa equipe cuida da estruturação e da gestão da operação.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-6"><span>Preciso ter CNPJ para começar?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-6" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
+<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-4"><span>Vocês executam ou só orientam?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-4" hidden>Executamos. Nossa gestão é mão na massa: a equipe entra na operação e cuida da estruturação das lojas, do cadastro e da otimização dos anúncios, das campanhas de Ads, das promoções e das estratégias de crescimento.</p></div>
+<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-5"><span>Em quais marketplaces vocês atuam?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-5" hidden>Temos especialistas em TikTok Shop, Temu, Kwai, Mercado Livre, Shopee e Shein. No Plano Escalado, você escolhe até 3 deles. Na Gestão Completa, trabalhamos com até 6, além da integração com 1 site próprio, caso sua empresa já tenha um e-commerce.</p></div>
+<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-6"><span>Qual a diferença entre os planos e a mentoria?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-6" hidden>Nos planos, a nossa equipe executa a gestão da sua operação. Na mentoria individual, quem executa é você, com o direcionamento do Weslen em quatro reuniões de uma hora ao longo de 30 dias e suporte pelo WhatsApp.</p></div>
+<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-7"><span>Quem cuida do estoque e do envio?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-7" hidden>Você continua acompanhando a operação e cuidando das atividades internas do negócio, como estoque, mercadorias e expedição. A nossa equipe atua na gestão, nas otimizações e nas estratégias de crescimento.</p></div>
+<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-8"><span>Preciso ter CNPJ para começar?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-8" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
 
 </div>
 </div>
@@ -834,12 +1017,14 @@ a:hover { color: #F6E2A8; }
 <a href="#planos">Planos</a>
 <a href="#como-funciona">Como funciona</a>
 <a href="#sobre">Sobre</a>
+<a href="#mentoria">Mentoria</a>
 <a href="#faq">Dúvidas</a>
 </nav>
-<nav class="foot-col" aria-label="Planos">
-<p class="foot-h">Planos</p>
-<a href="#planos">Plano Escala</a>
+<nav class="foot-col" aria-label="Soluções">
+<p class="foot-h">Soluções</p>
+<a href="#planos">Plano Escalado</a>
 <a href="#planos">Gestão Completa</a>
+<a href="#mentoria">Mentoria individual</a>
 <a href="#planos">Tráfego pago</a>
 </nav>
 <div class="foot-col">

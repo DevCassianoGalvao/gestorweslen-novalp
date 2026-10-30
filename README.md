@@ -1,6 +1,6 @@
 # Gestor Weslen — Nova landing page
 
-Landing page dos planos **Plano Escala** (3 marketplaces) e **Gestão Completa** (6 marketplaces), com tráfego pago integrado.
+Landing page dos planos **Plano Escalado** (até 3 marketplaces) e **Gestão Completa** (até 6 marketplaces + integração com site próprio), da **Mentoria individual** com o Weslen e do tráfego pago integrado.
 
 ## Estrutura
 
