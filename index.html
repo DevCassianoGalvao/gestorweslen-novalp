@@ -327,6 +327,18 @@ a:hover { color: #F6E2A8; }
 .step-tag { margin-top: 22px; font-size: 12px; color: var(--gold); letter-spacing: .14em; text-transform: uppercase; }
 
 /* prova */
+.pgrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: 56px; }
+.pcol { border: 1px solid var(--line2); border-radius: 28px; background: linear-gradient(180deg, #100D08, #0A0806); padding: 22px; min-width: 0; }
+.pcol-h { display: flex; flex-direction: column; gap: 4px; padding: 4px 4px 18px; }
+.pcol-t { font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: -.02em; color: var(--tx); }
+.pcol-s { font-size: 14px; color: var(--mu); }
+.pwin { height: 560px; overflow: hidden; border-radius: 16px; -webkit-mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent); }
+.ptrack { display: flex; flex-direction: column; gap: 14px; animation: pup 60s linear infinite; }
+.ptrack.down { animation-direction: reverse; animation-duration: 70s; }
+.pcol:hover .ptrack { animation-play-state: paused; }
+.shot { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line2); flex: none; }
+.shot img { display: block; width: 100%; height: auto; }
+@keyframes pup { to { transform: translateY(calc(-50% - 7px)); } }
 .logo-ph { flex: none; width: 210px; height: 92px; margin: 0 10px; border-radius: 18px; border: 1px dashed color-mix(in oklab, var(--gold) 38%, transparent); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; color: var(--mu); font-size: 13px; background: rgba(255,255,255,.015); transition: border-color .3s, color .3s; }
 .logo-ph:hover { border-color: var(--gold); color: var(--tx); }
 .logo-ph b { font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; color: var(--tx); opacity: .6; font-weight: 600; }
@@ -539,6 +551,7 @@ a:hover { color: #F6E2A8; }
   .steps-line { display: none; }
   .about { grid-template-columns: minmax(0, 1fr); gap: 56px; }
   .faq { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+  .pgrid { grid-template-columns: minmax(0, 1fr); }
   .faq-l { position: static; }
   .sec { padding: 96px 0; }
   .foot-top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -568,6 +581,8 @@ a:hover { color: #F6E2A8; }
   .mt-for, .mt-obj { padding: 26px 20px; }
   .mt-l .btn, .mt-obj .btn { width: 100%; }
   .tagl span { font-size: 16px; }
+  .pcol { padding: 14px; border-radius: 22px; }
+  .pwin { height: 420px; }
   .stats { grid-template-columns: minmax(0, 1fr); }
   .sp-card { padding: 28px 22px; }
   .trf { padding: 28px 22px; }
@@ -885,25 +900,24 @@ a:hover { color: #F6E2A8; }
 </div>
 </section>
 
-<section class="sec tight" aria-labelledby="prova-t">
+<section class="sec tight" id="resultados" aria-labelledby="prova-t">
 <div class="wrap">
 <div class="sec-head rv">
 <p class="eyebrow">Quem cresce com a gente</p>
-<h2 class="d h2" id="prova-t">Lojas reais. <span class="gold">Pode pesquisar.</span></h2>
-<p class="sub">Marcas que já vendem nos marketplaces com o apoio da nossa equipe.</p>
+<h2 class="d h2" id="prova-t">Clientes satisfeitos. <span class="gold">Resultados reais.</span></h2>
+<p class="sub">O que os clientes dizem e o que aparece no painel dos marketplaces.</p>
+</div>
+<div class="pgrid">
+<div class="pcol dep rv">
+<div class="pcol-h"><span class="pcol-t">Depoimentos</span><span class="pcol-s">Mensagens dos clientes pelo WhatsApp</span></div>
+<div class="pwin"><div class="ptrack "><figure class="shot"><img src="assets/dep-1.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-2.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-3.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-4.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-5.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-1.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-2.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-3.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-4.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure><figure class="shot"><img src="assets/dep-5.jpg" alt="Depoimento de cliente no WhatsApp" loading="lazy"></figure></div></div>
+</div>
+<div class="pcol res rv">
+<div class="pcol-h"><span class="pcol-t">Resultados</span><span class="pcol-s">Painéis dos marketplaces</span></div>
+<div class="pwin"><div class="ptrack down"><figure class="shot"><img src="assets/res-1.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-2.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-3.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-4.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-5.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-6.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-1.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-2.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-3.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-4.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-5.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure><figure class="shot"><img src="assets/res-6.jpg" alt="Print de resultados no painel do marketplace" loading="lazy"></figure></div></div>
 </div>
 </div>
-<div class="marquee rv">
-<div class="track slow">
-<div class="logo-ph"><b>Loja 01</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 02</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 03</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 04</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 05</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 06</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 07</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 08</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 01</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 02</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 03</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 04</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 05</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 06</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 07</b><span>[Logo da loja]</span></div><div class="logo-ph"><b>Loja 08</b><span>[Logo da loja]</span></div>
 </div>
-</div>
-<div class="marquee rv2" style="margin-top: 28px">
-<div class="track rev">
-<div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div><div class="pf" aria-hidden="true"><div class="pf-h"><span class="pf-av"></span><span class="pf-nm"></span></div><span class="bub w1"></span><span class="bub me w2"></span><span class="bub w3"></span><span class="bub me w4"></span><span class="pf-lbl">[Print do depoimento]</span></div>
-</div>
-</div>
-<p class="trust rv"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>Não divulgamos o faturamento dos nossos clientes. Os resultados são apresentados na análise gratuita.</p>
 </section>
 
 <section class="sec" id="sobre">
