@@ -23,4 +23,4 @@ Google Fonts: Bricolage Grotesque (títulos), Hanken Grotesk (texto) e Mrs Saint
 
 - FAQ: preço, prazo, fidelidade, investimento em anúncios e CNPJ estão em lorem ipsum.
 - Logos das lojas parceiras e prints de depoimentos são placeholders.
-- Foto do Weslen (seção Sobre) é placeholder.
+
