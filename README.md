@@ -22,5 +22,5 @@ Google Fonts: Bricolage Grotesque (títulos), Hanken Grotesk (texto) e Mrs Saint
 ## Pendências (aguardando o cliente)
 
 - FAQ: preço, prazo, fidelidade, investimento em anúncios e CNPJ estão em lorem ipsum.
-- Logos das lojas parceiras (seção removida por enquanto).
+
 
