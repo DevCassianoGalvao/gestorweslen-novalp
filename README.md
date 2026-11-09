@@ -4,7 +4,7 @@ Landing page dos planos **Plano Escalado** (até 3 marketplaces) e **Gestão Com
 
 ## Estrutura
 
-- `index.html` — página completa (HTML + CSS + JS das abas e do FAQ, tudo em um arquivo)
+- `index.html` — página completa (HTML + CSS + JS das abas, tudo em um arquivo)
 - `assets/logo-gold.png` — logotipo em dourado com fundo transparente
 
 Site estático: basta subir os arquivos para qualquer hospedagem.
@@ -21,6 +21,5 @@ Google Fonts: Bricolage Grotesque (títulos), Hanken Grotesk (texto) e Mrs Saint
 
 ## Pendências (aguardando o cliente)
 
-- FAQ: preço, prazo, fidelidade, investimento em anúncios e CNPJ estão em lorem ipsum.
 
 

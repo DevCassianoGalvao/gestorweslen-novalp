@@ -457,18 +457,6 @@ a:hover { color: #F6E2A8; }
 .tagl span { display: flex; align-items: center; gap: 12px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -.01em; }
 .tagl span::before { content: ''; width: 7px; height: 7px; transform: rotate(45deg); background: var(--gold); flex: none; }
 
-/* faq */
-.faq { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: 72px; align-items: start; }
-.faq-l { position: sticky; top: 120px; display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-.qa { border-bottom: 1px solid var(--line2); }
-.qa:first-child { border-top: 1px solid var(--line2); }
-.q { appearance: none; width: 100%; background: none; border: 0; color: var(--tx); font: inherit; font-size: 18px; font-weight: 600; text-align: left; padding: 24px 0; display: flex; justify-content: space-between; align-items: center; gap: 20px; cursor: pointer; min-height: 44px; transition: color .25s; }
-.q:hover { color: var(--gold-hi); }
-.q-ic { width: 36px; height: 36px; flex: none; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--gold); transition: transform .4s cubic-bezier(.3,1.4,.5,1), background .4s; }
-.qa.open .q-ic { transform: rotate(45deg); background: rgba(212,175,55,.14); }
-.a { padding: 0 64px 26px 0; color: var(--mu); font-size: 16px; line-height: 1.7; animation: pnin .5s cubic-bezier(.2,.7,.2,1) both; }
-.pend { display: inline-block; margin-left: 10px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-hi); border: 1px dashed var(--line); padding: 3px 9px; border-radius: 999px; vertical-align: middle; }
-
 /* cta */
 .cta { position: relative; border-radius: 36px; overflow: hidden; border: 1px solid var(--line); background: #0A0806; isolation: isolate; }
 .cta-bg { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
@@ -556,9 +544,7 @@ a:hover { color: #F6E2A8; }
   .steps { grid-template-columns: minmax(0, 1fr); }
   .steps-line { display: none; }
   .about { grid-template-columns: minmax(0, 1fr); gap: 56px; }
-  .faq { grid-template-columns: minmax(0, 1fr); gap: 40px; }
   .pgrid { grid-template-columns: minmax(0, 1fr); }
-  .faq-l { position: static; }
   .sec { padding: 96px 0; }
   .foot-top { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .foot-brand { grid-column: 1 / -1; }
@@ -594,7 +580,6 @@ a:hover { color: #F6E2A8; }
   .sp-card { padding: 28px 22px; }
   .trf { padding: 28px 22px; }
   .trf-l { flex-direction: column; }
-  .a { padding-right: 0; }
   .cta-c { padding: 72px 22px; }
   .cta { border-radius: 28px; }
   .sig { font-size: 44px; }
@@ -619,7 +604,6 @@ a:hover { color: #F6E2A8; }
 <a href="#como-funciona">Como funciona</a>
 <a href="#sobre">Sobre</a>
 <a href="#mentoria">Mentoria</a>
-<a href="#faq">Dúvidas</a>
 </nav>
 <a class="btn btn-gold btn-sm nav-cta" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20quero%20minha%20an%C3%A1lise%20gratuita.">Análise gratuita</a>
 <label class="mn-btn" for="mn" aria-hidden="true"><i></i><i></i><i></i></label>
@@ -629,7 +613,6 @@ a:hover { color: #F6E2A8; }
 <a href="#como-funciona" onclick="document.getElementById('mn').checked=false">Como funciona</a>
 <a href="#sobre" onclick="document.getElementById('mn').checked=false">Sobre</a>
 <a href="#mentoria" onclick="document.getElementById('mn').checked=false">Mentoria</a>
-<a href="#faq" onclick="document.getElementById('mn').checked=false">Dúvidas</a>
 <a class="btn btn-gold" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20quero%20minha%20an%C3%A1lise%20gratuita.">Análise gratuita</a>
 </nav>
 </header>
@@ -1018,29 +1001,6 @@ a:hover { color: #F6E2A8; }
 </div>
 </section>
 
-<section class="sec tight" id="faq">
-<div class="wrap faq">
-<div class="faq-l rv">
-<p class="eyebrow">Dúvidas</p>
-<h2 class="d h2">Perguntas frequentes.</h2>
-<p class="sub">Não encontrou o que procurava? Fale direto com a equipe.</p>
-<a class="btn btn-ghost" href="https://wa.me/5522981249732?text=Ol%C3%A1%20Weslen%2C%20tenho%20uma%20d%C3%BAvida.">Tirar uma dúvida</a>
-</div>
-<div class="rv2">
-<div class="qa open"><button class="q" type="button" aria-expanded="true" aria-controls="faq-0"><span>Quanto custa cada plano?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-1"><span>Em quanto tempo minha loja fica pronta?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-1" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-2"><span>Existe contrato mínimo ou fidelidade?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-2" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-3"><span>O investimento em anúncios está incluso?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-3" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-4"><span>Vocês executam ou só orientam?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-4" hidden>Executamos. Nossa gestão é mão na massa: a equipe entra na operação e cuida da estruturação das lojas, do cadastro e da otimização dos anúncios, das campanhas de Ads, das promoções e das estratégias de crescimento.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-5"><span>Em quais marketplaces vocês atuam?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-5" hidden>Temos especialistas em TikTok Shop, Temu, Kwai, Mercado Livre, Shopee e Shein. No Plano Escalado, você escolhe até 3 deles. Na Gestão Completa, trabalhamos com até 6, além da integração com 1 site próprio, caso sua empresa já tenha um e-commerce.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-6"><span>Qual a diferença entre os planos e a mentoria?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-6" hidden>Nos planos, a nossa equipe executa a gestão da sua operação. Na mentoria individual, quem executa é você, com o direcionamento do Weslen em quatro reuniões de uma hora ao longo de 30 dias e suporte pelo WhatsApp.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-7"><span>Quem cuida do estoque e do envio?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-7" hidden>Você continua acompanhando a operação e cuidando das atividades internas do negócio, como estoque, mercadorias e expedição. A nossa equipe atua na gestão, nas otimizações e nas estratégias de crescimento.</p></div>
-<div class="qa"><button class="q" type="button" aria-expanded="false" aria-controls="faq-8"><span>Preciso ter CNPJ para começar?</span><span class="q-ic" aria-hidden="true"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"></path></svg></span></button><p class="a" id="faq-8" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.<span class="pend">Aguardando cliente</span></p></div>
-
-</div>
-</div>
-</section>
-
 <section class="sec tight">
 <div class="wrap">
 <div class="cta rv">
@@ -1073,7 +1033,6 @@ a:hover { color: #F6E2A8; }
 <a href="#como-funciona">Como funciona</a>
 <a href="#sobre">Sobre</a>
 <a href="#mentoria">Mentoria</a>
-<a href="#faq">Dúvidas</a>
 </nav>
 <nav class="foot-col" aria-label="Soluções">
 <p class="foot-h">Soluções</p>
@@ -1116,22 +1075,6 @@ a:hover { color: #F6E2A8; }
       if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
       var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
       show(n.dataset.tab, true);
-    });
-  });
-  document.querySelectorAll('.qa .q').forEach(function (b) {
-    b.addEventListener('click', function () {
-      var item = b.closest('.qa');
-      var open = !item.classList.contains('open');
-      document.querySelectorAll('.qa.open').forEach(function (o) {
-        o.classList.remove('open');
-        o.querySelector('.q').setAttribute('aria-expanded', 'false');
-        o.querySelector('.a').hidden = true;
-      });
-      if (open) {
-        item.classList.add('open');
-        b.setAttribute('aria-expanded', 'true');
-        item.querySelector('.a').hidden = false;
-      }
     });
   });
 })();
